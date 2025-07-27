@@ -5,48 +5,50 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 2rem;
-  min-height: 100vh; /* ✅ เต็มจอแนวตั้ง */
-  width: 100vw;       /* ✅ เต็มจอแนวนอน */
-  background: linear-gradient(135deg, #f0f4ff, #ffffff);
-  gap: 2rem;
+  min-height: 100vh;
+  width: 100vw;
+ background: linear-gradient(to right, #ffe4e6, #fff1f2);
+  gap: 2.5rem;
   box-sizing: border-box;
   margin: 0;
-  border-radius: 0;
 }
-
 
 /* HERO TEXT */
 .hero-text {
   flex: 1 1 500px;
   text-align: left;
   padding: 1rem;
-  box-sizing: border-box;
 }
 
 .welcome {
-  font-size: 1.2rem;
-  color: #4a90e2;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #6366f1;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin: 0.5rem 0;
-  color: #333;
-  line-height: 1.4;
+  color: #1e293b;
+  line-height: 1.5;
 }
 
 .highlight {
-  color: #ff6b6b;
+  color: #f43f5e;
+  background: linear-gradient(to right, #f43f5e, #fb7185);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
 .description {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.8;
-  color: #555;
+  color: #475569;
+  text-align: justify;
 }
 
 /* HERO IMAGE */
@@ -62,13 +64,14 @@
   max-width: 280px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid #e0e0e0;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  border: 6px solid #e0e7ff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-img img:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.18);
 }
 
 /* RESPONSIVE DESIGN */
@@ -84,11 +87,11 @@
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .hero-img img {
@@ -98,15 +101,17 @@
 
 @media (max-width: 576px) {
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .welcome {
     font-size: 1rem;
+    color: #be123c
   }
 
   .description {
     font-size: 0.95rem;
+    color: #444
   }
 
   .hero-img img {

@@ -1,55 +1,63 @@
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #fdba74, #fb923c);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+/* Logo styling */
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+.logo:hover {
+  color: #d1d5db;
 }
 
+/* Hamburger menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 6px;
 }
-
 .menu-toggle span {
   height: 3px;
-  width: 25px;
-  background-color: #333;
+  width: 28px;
+  background-color: #ffffff;
   display: block;
   border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
-/* Desktop Navigation */
+/* Desktop nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .nav-links a:hover {
-  color: #007BFF;
+  color: #e0f2fe;
+  transform: scale(1.05);
 }
 
-/* Mobile Responsive */
+/* Mobile layout */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -59,13 +67,14 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #fff;
+    background: linear-gradient(180deg, #06b6d4 0%, #3b82f6 100%);
     flex-direction: column;
     align-items: flex-start;
-    width: 180px;          /* ลดความกว้างเมนูมือถือ */
-    padding: 0.75rem 1rem; /* ลด padding */
+    width: 180px;
+    padding: 0.75rem 1rem;
     display: none;
-    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 0.75rem 0.75rem;
   }
 
   .navbar.active .nav-links {
@@ -78,18 +87,19 @@
   }
 
   .nav-links a {
-    font-size: 1.1rem;    /* ขนาดตัวอักษรสำหรับมือถือ */
+    font-size: 1.1rem;
+    color: #f0f9ff;
   }
 
   .logo {
-    font-size: 1.3rem;    /* ปรับขนาดโลโก้บนมือถือ */
+    font-size: 1.4rem;
   }
 }
 
-/* สำหรับหน้าจอเล็กมาก เช่นมือถือแนวตั้ง */
+/* Small screen tweaks */
 @media (max-width: 400px) {
   .nav-links {
-    width: 140px;         /* ลดขนาดเมนูอีก */
+    width: 140px;
   }
 
   .nav-links a {
@@ -97,6 +107,6 @@
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }

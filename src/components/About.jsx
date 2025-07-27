@@ -12,10 +12,7 @@ function About() {
       
         <div>
           <h2 className="about-title">contact</h2>
-          <p className="about-description">
-            I'm a senior Computer Science student who loves building things and learning new technology.
-            I'm enthusiastic, responsible, and ready to contribute to a team. Let's connect!
-          </p>
+          
         </div>
       </div>
 

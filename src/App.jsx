@@ -27,12 +27,13 @@ function App() {
         <Qualification />
       </section>
 
-      <section className="main-section">
-        <About />
-      </section>
+      
 
       <section className="main-section">
         <Certificate />
+      </section>
+      <section className="main-section">
+        <About />
       </section>
     </>
   );

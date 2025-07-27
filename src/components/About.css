@@ -1,25 +1,30 @@
 .about-wrapper {
-  color: #283A49;
+  color: #44403c;
   padding: 80px 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #fef9c3, #fde68a);
 }
 
+/* Title & Description */
 .about-title {
-  font-size: 2.5em;
+  font-size: 2.6em;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  color: #f59e0b;
 }
 
 .about-description {
-  font-size: 1.1em;
+  font-size: 1.15em;
   max-width: 800px;
   margin: 0 auto 50px auto;
-  line-height: 1.6;
-  opacity: 0.85;
+  line-height: 1.7;
+  color: #334155;
+  opacity: 0.9;
 }
 
+/* Card Grid */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -28,41 +33,64 @@
   margin: 0 auto;
 }
 
+/* Card Styling */
 .about-card {
-  background-color: #FDD023;
-  border-radius: 10px;
+  background: linear-gradient(to bottom right, #fde68a, #fcd34d);
+  border-radius: 12px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .about-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+}
+.about-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* จัดให้ข้อความอยู่ตรงกลางแนวตั้ง */
+  align-items: center;       /* จัดให้ข้อความอยู่ตรงกลางแนวนอน */
+  text-align: center;        /* ให้ข้อความทุกบรรทัดจัดกลาง */
+  padding: 2rem;             /* เพิ่มระยะห่างรอบๆ ข้อความ */
 }
 
+/* Icons */
 .about-icon {
   font-size: 3em;
-  color: #ffffff;
+  color: #fff;
+  background-color: #f59e0b;
+  padding: 0.5rem;
+  border-radius: 50%;
   margin-bottom: 15px;
 }
 
-.card-title {
+/* Titles & Content */
+.card-title,
+.about-card h4 {
   font-size: 1.4em;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #1f2937;
 }
 
-.card-content {
+.card-content,
+.about-card p,
+.about-card a {
   font-size: 1em;
-  line-height: 1.5;
-  opacity: 0.95;
+  line-height: 1.6;
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.card-content:hover {
+  color: #f97316;
 }
 
-/* Responsive adjustments */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -75,7 +103,7 @@
   }
 
   .about-title {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .about-description {
