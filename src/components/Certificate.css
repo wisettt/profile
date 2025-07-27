@@ -1,0 +1,88 @@
+/* SECTION พื้นหลังและหัวข้อ */
+.certificate-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fc;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem; /* หัวข้อใหญ่ขึ้น */
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+/* GRID แสดงใบรับรอง */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;  /* กลับมาใช้ margin อัตโนมัติ ทำให้กึ่งกลาง */
+}
+
+
+/* CARD ของใบรับรอง */
+.certificate-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;              /* ✅ มุมมนขึ้น */
+  padding: 2.5rem 2rem;               /* ✅ เพิ่มพื้นที่ภายใน */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); /* ✅ เงาชัดขึ้น */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 500px;                 /* ✅ การ์ดสูงขึ้น */
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* รูปใบประกาศ */
+.certificate-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;                 /* ✅ ภาพใหญ่ขึ้น */
+  object-fit: contain;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ข้อความหัวข้อใบรับรอง */
+.certificate-card h3 {
+  font-size: 1.6rem;                 /* ✅ ข้อความใหญ่ขึ้น */
+  color: #007BFF;
+  margin-bottom: 0.75rem;
+}
+
+/* ชื่อผู้ออกใบรับรอง */
+.issuer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* วันที่ */
+.date {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ลิงก์ View Certificate */
+.certificate-card a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 600;
+}
+
+.certificate-card a:hover {
+  text-decoration: underline;
+}
+
+/* สำหรับหน้าจอใหญ่มาก ให้แสดง 2 ใบต่อแถว */
+@media (min-width: 1200px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

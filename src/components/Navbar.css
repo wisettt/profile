@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;          /* ลดความกว้างเมนูมือถือ */
+    padding: 0.75rem 1rem; /* ลด padding */
+    display: none;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;    /* ขนาดตัวอักษรสำหรับมือถือ */
+  }
+
+  .logo {
+    font-size: 1.3rem;    /* ปรับขนาดโลโก้บนมือถือ */
+  }
+}
+
+/* สำหรับหน้าจอเล็กมาก เช่นมือถือแนวตั้ง */
+@media (max-width: 400px) {
+  .nav-links {
+    width: 140px;         /* ลดขนาดเมนูอีก */
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+}
