@@ -24,7 +24,7 @@ function Navbar({ menuActive, toggleMenu, setMenuActive }) {
         
         <li><a href="#qualification" onClick={() => setMenuActive(false)}>Qualifications</a></li>
         <li><a href="#certificate" onClick={() => setMenuActive(false)}>Certificate</a></li>
-        <li><a href="#contact" onClick={() => setMenuActive(false)}>Contact</a></li>
+        <li><a href="#about" onClick={() => setMenuActive(false)}>Contact</a></li>
       </ul>
     </nav>
   );

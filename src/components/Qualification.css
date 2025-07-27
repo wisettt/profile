@@ -1,11 +1,11 @@
-/* Main section styling */
+/* 🌟 Main section styling */
 .qualification {
   background: linear-gradient(to right, #fafaf9, #fefce8);
   padding: 4rem 2rem;
   margin-top: 3rem;
 }
 
-/* Header styling */
+/* 🏷️ Header styling */
 .qualification h2 {
   font-size: 2.8rem;
   text-align: center;
@@ -17,7 +17,7 @@
   font-weight: bold;
 }
 
-/* Container and box layout */
+/* 📦 Container layout */
 .qualification-container {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +38,6 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
-/* Box headers */
 .qualification-box h3 {
   color: #78350f;
   margin-bottom: 1.5rem;
@@ -46,31 +45,47 @@
   text-align: center;
 }
 
-/* List and skill styling */
+/* 🛠️ Skills layout */
 .skills-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 0;
+  list-style: none;
 }
 
 .skill-pair {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
   background-color: #fef9c3;
-  padding: 0.6rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   box-shadow: inset 0 0 0 2px #facc15;
+}
+
+/* 🎯 Each skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.skill-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.skill-item span {
   font-size: 1.1rem;
   font-weight: 500;
   color: #78350f;
-}
-
-.skill-pair span {
-  flex: none;
   white-space: nowrap;
 }
 
-/* Responsive adjustments */
+/* 📱 Responsive styles */
 @media (max-width: 768px) {
   .qualification-container {
     flex-direction: column;
@@ -91,8 +106,17 @@
     font-size: 1.5rem;
   }
 
-  .skill-pair {
+  .skill-item span {
     font-size: 1rem;
+  }
+
+  .skill-pair {
+    gap: 16px;
     padding: 0.5rem 0.8rem;
+  }
+
+  .skill-item img {
+    width: 24px;
+    height: 24px;
   }
 }
